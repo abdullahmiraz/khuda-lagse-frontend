@@ -1,8 +1,8 @@
-import { MenuItem } from "../types";
+import type { MenuItem as MenuItemType } from "../types"; // Use 'MenuItemType' as an alias for type import
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 type Props = {
-  menuItem: MenuItem;
+  menuItem: MenuItemType;
   addToCart: () => void;
 };
 
