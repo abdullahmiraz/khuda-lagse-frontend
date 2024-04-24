@@ -14,14 +14,14 @@ export const useGetMyUser = () => {
     const response = await fetch(`${API_BASE_URL}/api/my/user`, {
       method: "GET",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "Content-Type": "application/json",
+        // Authorization: `Bearer ${accessToken}`,
+        // "Content-Type": "application/json",
       },
     });
 
-    if (!response.ok) {
-      throw new Error("Failed to fetch user");
-    }
+    // if (!response.ok) {
+    //   // throw new Error("Failed to fetch user");
+    // }
 
     return response.json();
   };
@@ -52,14 +52,13 @@ export const useCreateMyUser = () => {
     const response = await fetch(`${API_BASE_URL}/api/my/user`, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "Content-Type": "application/json",
+        // Authorization: `Bearer ${accessToken}`,        "Content-Type": "application/json",
       },
       body: JSON.stringify(user),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to create user");
+      // throw new Error("Failed to create user");
     }
   };
 
@@ -94,14 +93,13 @@ export const useUpdateMyUser = () => {
     const response = await fetch(`${API_BASE_URL}/api/my/user`, {
       method: "PUT",
       headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "Content-Type": "application/json",
+        // Authorization: `Bearer ${accessToken}`,        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
     });
 
     if (!response.ok) {
-      throw new Error("Failed to update user");
+      // throw new Error("Failed to update user");
     }
 
     return response.json();

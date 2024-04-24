@@ -19,7 +19,7 @@ export const useGetMyRestaurant = () => {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to get restaurant");
+      // throw new Error("Failed to get restaurant");
     }
     return response.json();
   };
@@ -49,7 +49,7 @@ export const useCreateMyRestaurant = () => {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to create restaurant");
+      // throw new Error("Failed to create restaurant");
     }
 
     return response.json();
@@ -90,7 +90,7 @@ export const useUpdateMyRestaurant = () => {
     });
 
     if (!response) {
-      throw new Error("Failed to update restaurant");
+      // throw new Error("Failed to update restaurant");
     }
 
     return response.json();
@@ -128,7 +128,7 @@ export const useGetMyRestaurantOrders = () => {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to fetch orders");
+      // throw new Error("Failed to fetch orders");
     }
 
     return response.json();
@@ -168,7 +168,7 @@ export const useUpdateMyRestaurantOrder = () => {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to update status");
+      // throw new Error("Failed to update status");
     }
 
     return response.json();
